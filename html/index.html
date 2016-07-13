@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mandala</title>
+	      <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <script src='../js/renderer.js'></script>
+        <link rel = 'stylesheet' type='text/css' href='../css/main.css'>
+    </head>
+    <body>
+      <div id="controls">
+        <h1>Mandala</h1>
+        <div id="menu">
+          <button id="toggleFullscreen">fullscreen (F11)</button>
+          <button id="toggleControls">controls (F12)</button>
+        </div>
+
+        <h2>layers</h2>
+        <div>
+          <input id="layers" type="text" data-dependency="numberOfLayers" title="Number of layers" readonly/>
+          <input id="selectLayer" type="number" data-dependency="numberOfLayers" title="selection: down (l), up (shift+l)"/>
+          <button id="addLayer" title="Add new Layer">add (ctrl+a)</button>
+        </div>
+        <div>
+          <button id="removeLayer" title="Remove selected Layer">remove selected (ctrl+x)</button>
+          <button id="removeAllLayers" title="Remove all Layers">remove all (ctrl+alt+x)</button>
+        </div>
+
+        <h2>Appearance</h2>
+        <div>
+          <div class="labelgroup">
+            <label>scale</label>
+            <input id="scale" type="range" data-dependency="selectedLayer" title="scale layer: down (s), up (shift+s)"/>
+          </div>
+          <div class="labelgroup">
+            <label>radius</label>
+            <input id="radius" type="range" data-dependency="selectedLayer" title="radius: decrease (r), increase (shift+r)"/>
+          </div>
+
+          <div class="labelgroup">
+            <label>p</label>
+            <input id="p" type="range" data-dependency="selectedLayer" title="axis windings: decrease (p), increase (shift+p)"/>
+          </div>
+
+          <div class="labelgroup">
+            <label>q</label>
+            <input id="q" type="range" data-dependency="selectedLayer" title="interior windings: decrease (q), increase (shift+q)"/>
+          </div>
+        </div>
+
+        <h2>Color</h2>
+        <div>
+          <div class="labelgroup">
+            <label>hue<br><i>colorwheel</i></label>
+            <input id="hue" type="range" data-dependency="selectedLayer" title="hue: cycle left (h), cycle right (shift+h)"/>
+          </div>
+          <div class="labelgroup">
+            <label>saturation<br><i>chromaticity</i></label>
+            <input id="saturation" type="range" data-dependency="selectedLayer" title="saturation: decrease (c), increase (shift+c)"/>
+          </div>
+          <div class="labelgroup">
+            <label>value<br><i>brightness</i></label>
+            <input id="value" type="range" data-dependency="selectedLayer" title="value: decrease (v), increase (shift+v)"/>
+          </div>
+          <div class="labelgroup">
+            <label>opacity<br><i>alpha</i></label>
+            <input id="opacity" type="range" data-dependency="selectedLayer" title="value: decrease (o), increase (shift+O)"/>
+          </div>
+        </div>
+
+        <h2>Offset</h2>
+        <div>
+          <div class="labelgroup">
+            <label>x</label>
+            <input id="offsetX" type="range" data-dependency="selectedLayer" title="x offset: decrease (alt+x), increase (alt+shift+x)"/>
+          </div>
+          <div class="labelgroup">
+            <label>y</label>
+            <input id="offsetY" type="range" data-dependency="selectedLayer" title="y offset: decrease (alt+y), increase (alt+shift+y)"/>
+          </div>
+          <div class="labelgroup">
+            <label>z</label>
+            <input id="offsetZ" type="range" data-dependency="selectedLayer" title="z offset: decrease (alt+z), increase (alt+shift+z)"/>
+          </div>
+        </div>
+
+        <h2>Rotation</h2>
+        <div>
+          <div class="labelgroup">
+            <label>x</label>
+            <input id="speedX" type="range" data-dependency="selectedLayer" title="x speed: decrease (x), increase (shift+x)"/>
+          </div>
+          <div class="labelgroup">
+            <label>y</label>
+            <input id="speedY" type="range" data-dependency="selectedLayer" title="y speed: decrease (y), increase (shift+y)"/>
+          </div>
+          <div class="labelgroup">
+            <label>z</label>
+            <input id="speedZ" type="range" data-dependency="selectedLayer" title="z speed: decrease (z), increase (shift+z)"/>
+          </div>
+          <div class="labelgroup">
+            <label>factor</label>
+            <input id="speedFactor" type="range" data-dependency="selectedLayer" title="speed multiplicator: decrease (f), increase (shift+f)"/>
+          </div>
+        </div>
+
+        <h2>Renderer</h2>
+        <div>
+          <div class="labelgroup">
+            <label>sides</label>
+            <input id="sides" type="range" title="kaleidoscope sides: decrease (-), increase (+)"/>
+          </div>
+          <div class="labelgroup">
+            <label>time factor</label>
+            <input id="timeFactor" type="range" title="global time multiplicator: decrease (t), increase (shift+t)"/>
+          </div>
+        </div>
+
+        <h2>Global</h2>
+        <div>
+          <button id="togglePause">Toggle Pause (space)</button>
+          <button id="toggleMouse">Toggle Mouse (ctrl+m)</button>
+        </div>
+        <div>
+          <button id="randomize">Randomize (ctrl+alt+r)</button>
+        </div>
+      </div>
+    </body>
+</html>

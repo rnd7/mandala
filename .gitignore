@@ -1,0 +1,17 @@
+node_modules
+bower_components
+jspm_packages
+workspace
+temp
+tmp
+.meteor
+.npm
+.grunt
+*~
+*#
+*.swp
+*.swo
+*.pid
+*.seed
+*.pid.lock
+*.log
