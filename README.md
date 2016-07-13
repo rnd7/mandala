@@ -19,4 +19,4 @@ This application creates animated mandalas. Check out following stills.
 ![mandala_4](https://raw.githubusercontent.com/rnd7/mandala/master/img/mandala_4.png)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rnd7/ui/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
